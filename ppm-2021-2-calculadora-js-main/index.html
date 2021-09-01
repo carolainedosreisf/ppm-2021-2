@@ -6,24 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <h1>Calculadora</h1>
     <p>
-        Número 1: <br>
-        <input id="numero1" type="text">
+        <label>Número 1:</label> <br>
+        <input id="numero1" type="text" placeholder="Digite um número">
     </p>
     <p>
-        Número 2: <br>
-        <input id="numero2" type="text">
+        <label>Número 2:</label> <br>
+        <input id="numero2" type="text" placeholder="Digite um número">
     </p>
     <p>
-        Operação: <br>
-        1 - Soma, 2 - Subtração, 3 - Multiplicação e 4 - Divisão <br>
-        <input id="operacao" type="text">
+        <label>Operação:</label> <br>
+        <select id="operacao">
+            <option value="0" default>Selecione uma operação</option>
+            <option value="1">Soma</option>
+            <option value="2">Subtração</option>
+            <option value="3">Multiplicação</option>
+            <option value="4">Divisão</option>
+        </select>
     </p>
-    <button onclick="calcular()">Calcular</button>
+    <div>
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpar()">Limpar</button>
+    </div>
     <p id="resultado">
         <!-- Resultado:  -->
     </p>
