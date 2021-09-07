@@ -49,6 +49,7 @@ function calcular()
     var campo_paragrafo_resultado = document.querySelector("#resultado_imc");
     var campo_paragrafo_resultado_desc = document.querySelector("#resultado_imc_descricao");
 
+    //Não foi solicitado o uso de toFixed nesse exercicio, mas acredito que é importante usar nesse caso.
     campo_paragrafo_resultado.innerHTML = "Seu IMC: "+imc.toFixed(2);
     campo_paragrafo_resultado_desc.innerHTML = "Classificação do seu IMC: "+descricao;
     if(classe_aux !=""){
