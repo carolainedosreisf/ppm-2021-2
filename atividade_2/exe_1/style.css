@@ -16,7 +16,7 @@ input {
     height: 28px;
 }
 
-button{
+.salvar{
     border-radius: 4px;
     padding: 6px 16px;
     color: #fff;
@@ -25,6 +25,20 @@ button{
     cursor: pointer;
 }
 
+.div-tarefas button{
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 3px 4px;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    cursor: pointer;
+}
+
 label{
     font-size: 18px;
+}
+
+.feito{
+    text-decoration: line-through;
 }

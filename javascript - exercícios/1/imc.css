@@ -1,0 +1,20 @@
+.saudavel {
+    color: green;
+}
+
+.atencao {
+    color: darkblue;
+}
+
+.grave {
+    color: orange;
+}
+
+.gravissimo {
+    color: red;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

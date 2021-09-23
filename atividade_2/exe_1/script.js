@@ -1,15 +1,48 @@
+var elementoTarefas = document.querySelector('.div-tarefas ul');
+var x = 0;
+
 function adicionar(){
-    var tarefa = document.querySelector("#tarefa").value;
+    var elementoTarefa = document.querySelector("#tarefa");
+    var tarefa = elementoTarefa.value;
 
     if(!tarefa){
-        alert("Campo vazio.")
+        alert("Campo vazio.");
+        elementoTarefa.focus();
     }else{
-        var elementoTarefas = document.querySelector('.div-tarefas ul');
-        var textNode = document.createTextNode(tarefa);
-        
+
+        var textNodeTarefa = document.createTextNode(tarefa+" ");
+        var textNodeRemover = document.createTextNode("Excluir");
+
         var liTarefas = document.createElement('li');
-        liTarefas.appendChild(textNode);
+        var removeTarefa = document.createElement('button');
+        liTarefas.setAttribute('id', 'li_'+x);
+        
+
+        liTarefas.appendChild(textNodeTarefa);
+        removeTarefa.appendChild(textNodeRemover);
+        liTarefas.appendChild(removeTarefa);
+
         elementoTarefas.appendChild(liTarefas);
-        document.elementoTarefas.appendChild(liTarefas);
+        removeTarefa.setAttribute('onclick', 'remover('+x+')');
+        liTarefas.setAttribute('onclick', 'feito('+x+')');
+
+        elementoTarefa.value = ""
+        elementoTarefa.focus();
+
+        x++;
     }
 }
+
+function remover(i){
+    elementoTarefas.removeChild(document.querySelector("#li_"+i));
+}
+
+function feito(i){
+    document.querySelector("#li_"+i).className = "feito";
+}
+
+document.querySelector("#tarefa").addEventListener('keypress', function(e){
+    if(e.which == 13){
+        adicionar();
+    }
+ }, false);

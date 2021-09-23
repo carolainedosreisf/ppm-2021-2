@@ -10,15 +10,13 @@
 </head>
 
 <body>
-    <div class="div-adicionar">
-        <label for="tarefa">Tarefa:</label>
-        <input id="tarefa" type="text">
-        <button class="salvar" onclick="adicionar()">Adicionar</button>
-    </div>
-    <div class="div-tarefas">
-        <h4>Tarefas</h4>
-        <ul></ul>
-    </div>
+    <h2>Estados do Sul</h2>
+    <label for="">Estado:</label>
+    <select id="estados-brasil-sul" onchange="trocarImagem()">
+        <option value="PR">PR</option>
+        <option value="RS">RS</option>
+        <option value="SC">SC</option>
+    </select>
 
     <script src="script.js"></script>
 
