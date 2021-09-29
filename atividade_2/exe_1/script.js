@@ -16,6 +16,7 @@ function adicionar(){
         var liTarefas = document.createElement('li');
         var removeTarefa = document.createElement('button');
         liTarefas.setAttribute('id', 'li_'+x);
+        liTarefas.className = "fazer";
         
 
         liTarefas.appendChild(textNodeTarefa);
