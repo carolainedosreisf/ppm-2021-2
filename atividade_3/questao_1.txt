@@ -1,0 +1,12 @@
+//Questão A
+NENHUM
+
+//Questão B
+*rest parameters
+
+//Questão C
+*Default parameters (no próprio paramentro da função)
+
+//Questão D
+*Nova sintaxe da Arrow Functions (inibição da palavra 'function' antes dos paramentros e necessidade de '=>' depois dos parametros)
+*template strings (são delimitadas pelos caracteres `` e as variáveis são interpoladas com ${variable})

@@ -7,7 +7,6 @@ class Pessoa {
         this.idade = idade;
         this.peso = peso;
         this.altura = altura;
-        this.cont = altura;
     }
 
     getInformacoes() {
