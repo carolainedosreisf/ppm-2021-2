@@ -1,21 +1,24 @@
 var cont = 0;
 
 class Pessoa {
+
+    static contador = 0
     
     constructor(nome = '', idade = 0, peso =0, altura=0) {
         this.nome = nome;
         this.idade = idade;
         this.peso = peso;
         this.altura = altura;
+        Pessoa.contador++
     }
 
     getInformacoes() {
         return `Nome: ${this.nome} \nIdade: ${this.idade}\nPeso: ${this.peso}\nAltura: ${this.altura}`
     }
 
-    static contador() {
-        cont++;
-        console.log(`Pessoas instanciadas: ${cont}`);
+    static logcontador() {
+        console.log(`Pessoas instanciadas: ${this.contador}`)
+        return Pessoa.contador
     }
 }
 
@@ -34,7 +37,4 @@ let p4 = new Pessoa('Julia',26,67.2,1.59);
 // console.log(p3.getInformacoes());
 // console.log(p4.getInformacoes());
 
-Pessoa.contador(p1);
-Pessoa.contador(p2);
-Pessoa.contador(p3);
-Pessoa.contador(p4);
+Pessoa.logcontador();
