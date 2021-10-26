@@ -11,6 +11,38 @@ class Pessoa {
         this.altura = altura;
         Pessoa.contador++
     }
+    
+    getNome() {
+        return this.nome;
+    }
+
+    getIdade() {
+        return this.idade;
+    }
+
+    getPeso() {
+        return this.peso;
+    }
+
+    getaltura() {
+        return this.altura;
+    }
+
+    set setNome(nome){
+        this.nome = nome;
+    }
+
+    set setIdade(idade){
+        this.idade = idade;
+    }
+
+    set setPeso(peso){
+        this.peso = peso;
+    }
+
+    set setAltura(altura){
+        this.altura = altura;
+    }
 
     getInformacoes() {
         return `Nome: ${this.nome} \nIdade: ${this.idade}\nPeso: ${this.peso}\nAltura: ${this.altura}`
